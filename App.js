@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, View} from 'react-native';
+import { View } from 'react-native';
 import Login from './src/components/Screens/Login';
 import Home from './src/components/Screens/Home';
 import AppLoading from 'expo-app-loading';
@@ -29,8 +29,8 @@ export default function App() {
   } else {
     return (
       <View style={{flex: 1}}>
-        {authPass ? <Home /> : <Login setAuthPass={setAuthPass}/>}
         <StatusBar style="light" />
+        {authPass ? <Home /> : <Login setAuthPass={setAuthPass}/>}
       </View>
       )
   }
