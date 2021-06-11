@@ -24,8 +24,8 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     height: 150,
-    padding: 20,
-    marginBottom: 100,
+    marginTop: '10%',
+    marginBottom: '12%',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center'

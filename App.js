@@ -15,7 +15,7 @@ const getFonts = () => Font.loadAsync({
 });
 
 export default function App() {
-  const [authPass, setAuthPass] = useState(false);
+  const [authPass, setAuthPass] = useState(true);
   const [fontsLoaded, setFontsLoaded] = useState(false);
 
   if (!fontsLoaded) {
