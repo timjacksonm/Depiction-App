@@ -12,7 +12,16 @@ function GalleryScreen({ navigation }) {
     </View>
   );
 }
-
+const captureHeader = {
+  title: 'Capture',
+  headerStyle: {
+    backgroundColor: '#588467',
+  },
+  headerTintColor: '#fff',
+  headerTitleStyle: {
+    fontFamily: 'playfairBold',
+  },
+}
 const Stack = createStackNavigator();
 
 export default function Home() {
@@ -41,7 +50,7 @@ export default function Home() {
               )
               })}
               headerStyle={{backgroundColor: 'blue'}}/>
-        <Stack.Screen name="Capture" component={CaptureScreen} />
+        <Stack.Screen name="Capture" component={CaptureScreen} options={captureHeader}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
