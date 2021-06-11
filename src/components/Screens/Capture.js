@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { Camera } from 'expo-camera';
 
-export default function Login() {
+export default function CaptureScreen() {
+  const [hasPermission, setHasPermission] = useState(null)
+
+  useEffect(() => {
+    (async () => {
+      const { status } = await Camera.requestPermissionsAsync();
+      setHasPermission(status === 'granted');
+    })();
+  }, []);
+
+  if (hasPermission === null) {
     return (
       <View style={styles.container}>
-        <Text>Capture Screen</Text>
+        <Text>Request Camera Permission</Text>
       </View>
     );
   }
+}
   
   const styles = StyleSheet.create({
     container: {

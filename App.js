@@ -15,7 +15,7 @@ const getFonts = () => Font.loadAsync({
 });
 
 export default function App() {
-  const [authPass, setAuthPass] = useState(true);
+  const [authPass, setAuthPass] = useState(false);
   const [fontsLoaded, setFontsLoaded] = useState(false);
 
   if (!fontsLoaded) {
@@ -30,7 +30,7 @@ export default function App() {
     return (
       <View style={{flex: 1}}>
         <StatusBar style="light" />
-        {authPass ? <Home /> : <Login setAuthPass={setAuthPass}/>}
+        {authPass ? <Home /> : <Login setAuthPass={() => setAuthPass(true)}/>}
       </View>
       )
   }
