@@ -51,31 +51,36 @@ If you do not have those options setup. See guides below.
 <details>
   <summary>Show Images</summary>
    
-The below gif shows the app connected to my phone. On my phone I take a picture and it automatically uploads to my Firebase storage bucket including metadata 'title: , date: '. After refreshing the screen you see the blob file containing the base64 text file named '16183520210613'. The name is a combination of the time the photo was taken and the current date.
+The below gif shows the app connected to my phone.
+   
+On my phone I take a picture and it automatically uploads to my Firebase storage bucket including metadata 'title: , date: '.
+   
+After refreshing the screen you see the blob file containing the base64 text file named '16183520210613'. The name is a combination of the time the photo was taken and the current date.
+   
 <image src="src/assets/demoofapp.gif">
 
-The next couple images show me interacting with the app using my Samsung Galaxy s7 Phone.
+   <h3>The next couple images show me interacting with the app using my Samsung Galaxy s7 Phone.</h3>
 
-logging in with the wrong credentials returns error.
+**Logging into the app with the wrong credentials returns error.**
    
 <image src="src/assets/1s.jpg">
    
-correct credentials after error before clicking login.
+**Using correct credentials after error, before clicking login.**
    
 <image src="src/assets/2.jpg">
    
-Home screen which includes the gallery. To load gallery you have to click the refresh icon.
+**Home screen which includes the gallery. To load the gallery you have to click the refresh icon.**
 <image src="src/assets/3.jpg">
    
-After hitting refresh you see the images populate. The first image is the base64 image from the bucket. Doesn't display properly atm but you can see the metadata was added to the component.
+**After hitting refresh you see the images populate. The first image is the base64 image taken by me in the gif above. It doesn't display properly at the moment but you can see the metadata was added to the component. More about why it doesn't display properly in the summary of this Readme.**
    
 <image src="src/assets/4.jpg">
    
-Hibbing photos around my house including a poorly done flowerbed and my one eyed cat named Zander!
+**Hibbing photos around my house including a flowerbed and my one eyed cat named Zander!**
    
 <image src="src/assets/5.jpg">
    
-Camera in action! What the image looks like as you are about to take a photo.
+**Camera in action! Showcasing what the image looks like as you are about to take a photo.**
    
 <image src="src/assets/6.jpg">
 
@@ -83,7 +88,7 @@ Camera in action! What the image looks like as you are about to take a photo.
 
 ## Summary
 
-I learned a lot during this mini-project. I spent the first 2 1/2 days reading exclusively the react-native / expo docuements page after page. The remaining 4 days I tried my best to apply what I just learned to create this app.
+I learned a lot during this mini-project. I spent the first 2 1/2 days reading exclusively the react-native / expo docuements page after page. The remaining 4 days I tried my best to apply what I just learned to create this app. Total time spent: A little more than 6 days.
 
 What did I learn?
 
