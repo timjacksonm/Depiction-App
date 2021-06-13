@@ -70,7 +70,7 @@ export default function Form(props) {
         <View style={globalStyles.container}>
             <Button disabled={isLoading} onPress={() => onLoginPress(username, password)} title={'Login'} />
           <View style={styles.testerContainer}>
-            <Text style={globalStyles.text}>Continue as tester?</Text>
+            <Text style={globalStyles.text}>Continue on tester account?</Text>
             <Button title={'Click Me'} onPress={() => {
               setUserName('DepictionApp@gmail.com');
               setPassword('yAV!UG&c');

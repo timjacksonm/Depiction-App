@@ -4,7 +4,6 @@ import { FontAwesome, Ionicons } from '@expo/vector-icons';
 import { Camera } from 'expo-camera';
 import { firebase } from '../../firebase/Config';
 const storage = firebase.storage();
-const folderRef = storage.ref('Images');
 
 export default function App() {
   const [hasPermission, setHasPermission] = useState(null);
@@ -20,10 +19,13 @@ export default function App() {
 
   const takePicture = async () => {
     if(camera) {
+      const userEmail = firebase.auth().currentUser.email.split('@');
+      const folderName = userEmail[0];
+      const folderRef = storage.ref(`${folderName}/Images`)
       try {
       const data = await camera.takePictureAsync({ base64: true, exif: true }) //File path/info from camera
       const name = data.exif.DateTime.split(':').join('').split(' ');
-      const storageRef = storage.ref(`Images/${name[1]}${name[0]}`); //Name File
+      const storageRef = storage.ref(`${folderName}/Images/${name[1]}${name[0]}`); //Name File
       const blob = new Blob([data.base64], {type: "application/Base64"}) //Convert base64 to blob
       await storageRef.put(blob) //Send blob to bucket
       const imageRef = await folderRef.child(`${name[1]}${name[0]}`) //Ref to Image
