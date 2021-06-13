@@ -55,34 +55,62 @@ The below gif shows the app connected to my phone.
    
 On my phone I take a picture and it automatically uploads to my Firebase storage bucket including metadata 'title: , date: '.
    
-After refreshing the screen you see the blob file containing the base64 text file named '16183520210613'. The name is a combination of the time the photo was taken and the current date.
-   
+Show ImagesAfter refreshing the screen you see the blob file containing the base64 text file named '16183520210613'. The name is a combination of the time the photo was taken and the current date.
+
 <image src="src/assets/demoofapp.gif">
+
 
    <h3>The next couple images show me interacting with the app using my Samsung Galaxy s7 Phone.</h3>
 
-**Logging into the app with the wrong credentials returns error.**
+
+      
+<details> 
+
+   <summary> Logging into the app with the wrong credentials returns error. </summary>
    
-<image src="src/assets/1s.jpg">
+   <image src="src/assets/1s.jpg">
+      
+</details>
+
+<details>
    
-**Using correct credentials after error, before clicking login.**
+   <summary> Using correct credentials after error, before clicking login. </summary>
    
-<image src="src/assets/2.jpg">
+   <image src="src/assets/2.jpg">
    
-**Home screen which includes the gallery. To load the gallery you have to click the refresh icon.**
-<image src="src/assets/3.jpg">
+</details>
    
-**After hitting refresh you see the images populate. The first image is the base64 image taken by me in the gif above. It doesn't display properly at the moment but you can see the metadata was added to the component. More about why it doesn't display properly in the summary of this Readme.**
+<details>
    
-<image src="src/assets/4.jpg">
+   <summary> Home screen which includes the gallery. To load the gallery you have to click the refresh icon. </summary>
    
-**Hibbing photos around my house including a flowerbed and my one eyed cat named Zander!**
+   <image src="src/assets/3.jpg">
    
-<image src="src/assets/5.jpg">
+</details>
    
-**Camera in action! Showcasing what the image looks like as you are about to take a photo.**
+<details> 
+
+   <summary> After hitting refresh you see the images populate. The first image is the base64 image taken by me in the gif above. It doesn't display properly at the moment but you can see the metadata was added to the component. More about why it doesn't display properly in the summary of this Readme. </summary>
    
-<image src="src/assets/6.jpg">
+   <image src="src/assets/4.jpg">
+      
+</details>
+   
+<details> 
+
+   <summary> Hibbing photos around my house including a flowerbed and my one eyed cat named Zander! </summary>
+   
+   <image src="src/assets/5.jpg">
+      
+</details>
+   
+<details> 
+
+   <summary> Camera in action! Showcasing what the image looks like as you are about to take a photo. </summary>
+   
+   <image src="src/assets/6.jpg">
+      
+</details>
 
 </details>
 
@@ -108,7 +136,7 @@ I learned a lot during this mini-project. I spent the first 2 1/2 days reading e
 
 <p>Most difficult was figuring out how to use the returned promise from takePictureAsync() (expo method) and get that image to my storage bucket 'Firebase'. The promise gave me an object containing { uri, width, height, exif, base64 } with exif & base64 as optional parameters. I started by giving my method the optional paremeter of { base64: true } so I could utilize the base64 string. I tried uploading that string to firebase but was rejected for unknown character value found. I tried a lot of troubleshooting techniques by researching online. A few include = searching the string with regex to verify if something was at the end. Utilizing different option parameters on the putString() method that firebase requires.</p>
    <p>Eventually I ended up putting the base64 string in a blob and sending the blob as a data_url to firebase. Firebase accepted that. Known issue: Currently the saved image files from storage do not display in the gallery.</p>
-   I did take a few of my photos took with the camera and converted them to png. I converted them using this <a href="https://codebeautify.org/base64-to-image-converter" target="_blank">website</a> which takes a base64 string.
+   I did take a few of my photos taken with the camera and converted them to png. I converted them using this <a href="https://codebeautify.org/base64-to-image-converter" target="_blank">website</a> which takes a base64 string.
    
 Captured images are currently set to a 4:3 aspect ratio and lowest resolution available on my Samsung Galaxy S7 Device. I wasn't going for pretty but most efficient. I was not able to test this app using an IOS device. I did not use a emulator / simulator for testing.
 
