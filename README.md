@@ -1,5 +1,5 @@
 <h1 align="center">
-   <image src="#" width="100%"> 
+   <image src="src/assets/logo.jpg" width="50%"> 
 </h1>
 
 <h5 align="center">A Photo App! This project uses React-Native>Expo-Cli, Firebase BaaS & Styled Components.</h5>
@@ -12,8 +12,6 @@
   <a href="#author">Author</a> •
   <a href="#license">License</a>
 </p>
-
-### ✨ [QR Code](#)
 
 ## Installation
 
@@ -52,17 +50,34 @@ If you do not have those options setup. See guides below.
 
 <details>
   <summary>Show Images</summary>
+   
+The below gif shows the app connected to my phone. On my phone I take a picture and it automatically uploads to my Firebase storage bucket including metadata 'title: , date: '. After refreshing the screen you see the blob file containing the base64 text file named '16183520210613'. The name is a combination of the time the photo was taken and the current date.
+<image src="src/assets/demoofapp.gif">
 
-<image src="#">
+The next couple images show me interacting with the app using my Samsung Galaxy s7 Phone.
 
-The next couple images show a interactions with the app using a Samsung Galaxy s7 Phone.
-
-<image src="#">
-<image src="#">
-<image src="#">
-<image src="#">
-<image src="#">
-<image src="#">
+logging in with the wrong credentials returns error.
+   
+<image src="src/assets/1.jpg">
+   
+correct credentials after error before clicking login.
+   
+<image src="src/assets/2.jpg">
+   
+Home screen which includes the gallery. To load gallery you have to click the refresh icon.
+<image src="src/assets/3.jpg">
+   
+After hitting refresh you see the images populate. The first image is the base64 image from the bucket. Doesn't display properly atm but you can see the metadata was added to the component.
+   
+<image src="src/assets/4.jpg">
+   
+Hibbing photos around my house including a poorly done flowerbed and my one eyed cat named Zander!
+   
+<image src="src/assets/5.jpg">
+   
+Camera in action! What the image looks like as you are about to take a photo.
+   
+<image src="src/assets/6.jpg">
 
 </details>
 
@@ -101,6 +116,7 @@ This project was created as a task for an Interview. The goals of the project wa
 What can make this app better?
 
 - Pictures taken by camera and uploaded to firebase are not in a readable / applicable format once downloaded to display in the gallery. You could not upload the images and just display them based on their data.uri , however that defeats the purpose of using a BaaS to hold your data.
+- Gallery should load as soon as the component mounts - instead you have to click the refresh button to get the images.
 - Gestures! I am aware based on what I learned I can add different gesture type components that listen for a swipe or tap etc. Would improve the app a lot by making your different touches responsive.
 -  Performance. Image sizes are captured small - file size is larger than expected. Could implement React Navigation a bit better that includes the login screen. Currently only has 2 screens. Home(Gallery) & Capture(Camera)
 - When you go to type in credentials at login the password box is hidden due to overlapping keyboard. Can fix this with styling.
