@@ -140,7 +140,7 @@ I learned a lot during this mini-project. I spent the first 2 1/2 days reading e
    
 Captured images are currently set to a 4:3 aspect ratio and lowest resolution available on my Samsung Galaxy S7 Device. I wasn't going for pretty but most efficient. I was not able to test this app using an IOS device. I did not use a emulator / simulator for testing.
 
-   <h3>This project was created as a task for an Interview. The goals of the project were to...</h3>
+   <h3>This project was created as a task for an Interview. The goals of the project below</h3>
    
 - Learn React-Native and create an app.
 - The app should allow a user to log in with credentials.
@@ -160,6 +160,7 @@ Captured images are currently set to a 4:3 aspect ratio and lowest resolution av
 - Reponsive buttons - They don't quite have that Clicked feel. There are certain components that give that effect I believe like Pressable.
 - Ensure the app works on IOS. I don't currently have an Iphone and was only using my actual device for testing.
 - Functionality to login screen buttons like Remember Me / Forgot Password. Adding a register here button etc.
+- Loading screens.
 
 ## Author
 
