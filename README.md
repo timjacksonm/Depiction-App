@@ -58,7 +58,7 @@ The next couple images show me interacting with the app using my Samsung Galaxy 
 
 logging in with the wrong credentials returns error.
    
-<image src="src/assets/1.jpg">
+<image src="src/assets/1s.jpg">
    
 correct credentials after error before clicking login.
    
