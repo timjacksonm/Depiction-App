@@ -7,22 +7,6 @@ const storageRef = storage.ref('Images');
 export default function Gallery() {
     const [imageList, setImageList] = useState([])
     
-    // const updateMeta = async () => {
-    //     try {
-    //         const forestRef = await storageRef.child('image3.jpg');
-    //         var metadata = {
-    //             customMetadata: {
-    //               'title': 'Dusk Air Travel',
-    //               'date': 'June 9, 2021'
-    //             }
-    //           };
-    //         forestRef.updateMetadata(metadata);
-    //         console.log('test')
-    //         } catch(error) {
-
-    //         }
-    //     }
-
     const getImageList = async () => {
         setImageList([]) // resets image list
         try {
