@@ -7,7 +7,8 @@ export default function Login(props) {
   return (
     <ImageBackground
       source={require('../../assets/background.jpg')}
-      style={styles.image}>
+      style={styles.image}
+    >
       <View style={styles.titleContainer}>
         <Text style={[globalStyles.titleText, styles.title]}>De</Text>
         <Text style={[globalStyles.titleText, styles.titleColor]}>pic</Text>
