@@ -15,7 +15,12 @@
 
 ## Installation
 
-Two Options Available to get this app up and running on your phone/simulator
+- You will need to fork this repository.
+- Clone the repository locally.
+- Install dependencies with `npm install`
+- Run in your terminal `npm start` or `expo start` so you have a live local host version running.
+
+At this point you have two options available to get this app up and running.
 
 <details>
 <summary>Expo Go app for IOS and Android (fastest method)</summary>
@@ -24,25 +29,20 @@ The fastest way to get up and running is to use the Expo Go app on your iOS or A
 
 - 🤖 Android Play Store: (https://play.google.com/store/apps/details?id=host.exp.exponent) - Android Lollipop (5) and greater.
 - 🍎 iOS App Store: (https://itunes.com/apps/exponent) - iOS 11 and greater.
-   
+
 When the Expo Go app is finished installing, open it up. If you created an account with expo-cli then you can sign in here on the "Profile" tab. This will make it easier for you to open projects in the client when you have them open in development — they will appear automatically in the "Projects" tab of the client app.
-   
-Last step is to scan the QR Code on this page: (#) via the app
+
+Last step is to scan the QR Code that is in the terminal.
+
 </details>
 
 <details>
 <summary>Simulator / Emulator</summary>
 
-- You will need to fork this repository.
-- Install dependencies with `npm install`
-- Run in your terminal `npm start` or `expo start`
-
-On the local host page left side panel. Run on Android device/emulator | Run on IOS simulator.
-
-If you do not have those options setup. See guides below.
-
 - installing the iOS Simulator (macOS only): (https://docs.expo.io/workflow/ios-simulator/)
 - installing an Android emulator: (https://docs.expo.io/workflow/android-studio-emulator/)
+
+Once you have a one of these two setup. You will need to click on Android device/emulator Or Run on IOS simulator from the window that opened when you ran npm start.
 
 </details>
 
@@ -59,12 +59,9 @@ Show ImagesAfter refreshing the screen you see the blob file containing the base
 
 <image src="src/assets/demoofapp.gif">
 
-
    <h3>The next couple images show me interacting with the app using my Samsung Galaxy s7 Phone.</h3>
 
-
-      
-<details> 
+<details>
 
    <summary> Logging into the app with the wrong credentials returns error. </summary>
    
@@ -88,7 +85,7 @@ Show ImagesAfter refreshing the screen you see the blob file containing the base
    
 </details>
    
-<details> 
+<details>
 
    <summary> After hitting refresh you see the images populate. The first image is the base64 image taken by me in the gif above. It doesn't display properly at the moment but you can see the metadata was added to the component. More about why it doesn't display properly in the summary of this Readme. </summary>
    
@@ -96,7 +93,7 @@ Show ImagesAfter refreshing the screen you see the blob file containing the base
       
 </details>
    
-<details> 
+<details>
 
    <summary> Hibbing photos around my house including a flowerbed and my one eyed cat named Zander! </summary>
    
@@ -104,7 +101,7 @@ Show ImagesAfter refreshing the screen you see the blob file containing the base
       
 </details>
    
-<details> 
+<details>
 
    <summary> Camera in action! Showcasing what the image looks like as you are about to take a photo. </summary>
    
@@ -149,13 +146,13 @@ Captured images are currently set to a 4:3 aspect ratio and lowest resolution av
 - App should request permission to use camera and allow user to take a picture to save to gallery.
 
 ## Improvements
-      
+
 **What can make this app better?**
 
 - Pictures taken by camera and uploaded to firebase are not in a readable / applicable format once downloaded to display in the gallery. Work around would be to not upload the images and just display them based on their data.uri , however that defeats the purpose of using a BaaS to hold your data.
 - Gallery should load as soon as the component mounts - instead you have to click the refresh button to get the images.
 - Gestures! I am aware based on what I learned I can add different gesture type components that listen for a swipe or tap etc. Would improve the app a lot by making your different touches responsive.
--  Performance. Image sizes are captured small - file size is larger than expected. Could implement React Navigation a bit better that includes the login screen. Currently only has 2 screens. Home(Gallery) & Capture(Camera)
+- Performance. Image sizes are captured small - file size is larger than expected. Could implement React Navigation a bit better that includes the login screen. Currently only has 2 screens. Home(Gallery) & Capture(Camera)
 - When you go to type in credentials at login the password box is hidden due to overlapping keyboard. Can fix this with styling.
 - Reponsive buttons - They don't quite have that Clicked feel. There are certain components that give that effect I believe like Pressable.
 - Ensure the app works on IOS. I don't currently have an Iphone and was only using my actual device for testing.
